@@ -1,0 +1,116 @@
+/* Centralização do formulário */
+#formleitor,
+.form-leitor {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 150px;
+}
+
+/* Container principal */
+.container-form {
+    position: relative;
+    max-width: 500px; /* Corrigido para largura máxima */
+    width: 100%;
+    margin: auto;
+    background: #FFF;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.container-form .title-form {
+    font-size: 1.2em;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Formulário */
+.container-form .form {
+    margin-top: 35px;
+    width: 100%;
+}
+
+.form .input-box {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.input-box label {
+    color: #000;
+    font-size: 1rem;
+}
+
+/* Campos de entrada e seleção */
+.input-box input,
+.input-box select {
+    position: relative;
+    height: 35px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+
+    border: 1px solid #A4E3F0;
+    border-radius: 6px;
+    padding: 0 15px;
+    background: #E9F8FB;
+    box-sizing: border-box;
+}
+
+/* Campo de texto */
+.form :where(.input-box textarea) {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 5px;
+    border: 1px solid #A4E3F0;
+    border-radius: 6px;
+    padding: 10px;
+    background: #E9F8FB;
+}
+
+/* Foco nos campos */
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Botão */
+.form button {
+    height: 40px;
+    width: 20%;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #007cff;
+    position: absolute; /* Mantido como no código original */
+}
+
+.form button:hover {
+    background: #28D1F2;
+}
+
+/* Colunas no formulário */
+.form .column {
+    display: flex;
+    column-gap: 15px;
+}
+
+/* Classe auxiliar para ocultar */
+.naoexibir {
+    display: none;
+}
