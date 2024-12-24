@@ -13,11 +13,11 @@ return new class extends Migration {
         Schema::create('saidas', function (Blueprint $table) {
             // Dados do Livro
             $table->increments('id');
-            $table->bigInteger('leitor_id');
+            $table->foreignId('leitor_id')->constrained(table:'leitors' );
             $table->foreignId('livro_id')->constrained(table:'livros' );
             $table->date('data_saida');
             $table->date('data_devolucao');
-            $table->foreign('leitor_id')->references('id')->on('leitors');
+          //  $table->foreign('leitor_id')->references('id')->on('leitors');
         });
     }
 
@@ -26,3 +26,4 @@ return new class extends Migration {
        Schema::dropIfExists('saidas');
     }
 };
+
